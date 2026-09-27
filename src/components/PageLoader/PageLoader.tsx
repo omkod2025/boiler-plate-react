@@ -1,9 +1,10 @@
+import Spinner from '@/components/Spinner/Spinner'
 import styles from './PageLoader.module.css'
 
 function PageLoader() {
   return (
     <div className={styles.loader} role="status" aria-live="polite">
-      <span className={styles.spinner} aria-hidden="true" />
+      <Spinner label={null} />
       <span className={styles.label}>Loading…</span>
     </div>
   )

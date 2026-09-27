@@ -1,0 +1,29 @@
+.group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  text-align: left;
+}
+
+.legend {
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.horizontal {
+  flex-wrap: wrap;
+  column-gap: 24px;
+}

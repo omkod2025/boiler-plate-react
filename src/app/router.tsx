@@ -13,6 +13,7 @@ export const router = createBrowserRouter([
     HydrateFallback: PageLoader,
     children: [
       { index: true, lazy: lazyPage(routes.home.load) },
+      { path: routes.components.path, lazy: lazyPage(routes.components.load) },
       { path: routes.about.path, lazy: lazyPage(routes.about.load) },
       {
         path: '*',
