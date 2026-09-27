@@ -7,6 +7,11 @@ export const routes = {
     label: 'Home',
     load: () => import('@/pages/Home/HomePage'),
   },
+  components: {
+    path: '/components',
+    label: 'Components',
+    load: () => import('@/pages/Components/ComponentsPage'),
+  },
   about: {
     path: '/about',
     label: 'About',
@@ -16,4 +21,4 @@ export const routes = {
 
 export type RouteKey = keyof typeof routes
 
-export const navRoutes: readonly RouteKey[] = ['home', 'about']
+export const navRoutes: readonly RouteKey[] = ['home', 'components', 'about']

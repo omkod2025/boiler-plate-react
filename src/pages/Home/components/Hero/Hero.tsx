@@ -27,7 +27,7 @@ function Hero() {
           <code>HMR</code>
         </p>
       </div>
-      <Button onClick={() => setCount((c) => c + 1)}>Count is {count}</Button>
+      <Button variant="soft" onClick={() => setCount((c) => c + 1)}>Count is {count}</Button>
     </section>
   )
 }

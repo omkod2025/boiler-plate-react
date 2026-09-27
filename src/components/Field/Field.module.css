@@ -1,0 +1,61 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.required {
+  color: var(--danger);
+  margin-left: 2px;
+}
+
+.hint,
+.error {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.error {
+  color: var(--danger);
+}
+
+/* Shared look for text-like controls; composed by Input, Textarea and Select */
+.control {
+  font: inherit;
+  font-size: 16px;
+  color: var(--text-h);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+
+  &::placeholder {
+    color: var(--text);
+    opacity: 0.8;
+  }
+  &:hover:not(:disabled) {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-color: var(--accent);
+  }
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  &[aria-invalid='true'] {
+    border-color: var(--danger);
+  }
+}

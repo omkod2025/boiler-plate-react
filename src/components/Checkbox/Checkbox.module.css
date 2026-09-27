@@ -1,0 +1,38 @@
+/* Also used by Radio, which shares this layout */
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+.input {
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  flex-shrink: 0;
+  accent-color: var(--accent-solid);
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:disabled + div {
+    opacity: 0.55;
+  }
+}
+
+.label {
+  font-size: 16px;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.hint {
+  font-size: 14px;
+  line-height: 1.4;
+}

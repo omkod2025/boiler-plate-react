@@ -18,7 +18,10 @@ src/
 │   ├── router.tsx        # Route tree (pages are lazy-loaded)
 │   └── routes.ts         # Page paths, labels and lazy imports
 ├── components/           # Shared components, used by more than one page
-│   ├── Button/
+│   ├── Button/  Input/  Textarea/  Select/  Checkbox/  Radio/  Switch/
+│   ├── Card/  Badge/  Avatar/  Alert/  Spinner/  Skeleton/
+│   ├── Modal/  Tooltip/  Tabs/
+│   ├── Field/            # Label + hint + error wrapper used by form controls
 │   ├── Layout/           # Navbar + <Outlet />
 │   ├── Navbar/           # Preloads a page chunk on hover/focus
 │   └── PageLoader/
@@ -27,12 +30,29 @@ src/
 │   │   ├── HomePage.tsx
 │   │   ├── HomePage.module.css
 │   │   └── components/   # Components used only by this page
+│   ├── Components/       # Live showcase of every shared component (/components)
 │   ├── About/
 │   └── NotFound/
 ├── styles/global.css     # Design tokens and base element styles
 ├── assets/
 └── main.tsx
 ```
+
+## Components
+
+Open `/components` in the dev server to see and try every component.
+
+| Group | Components |
+| --- | --- |
+| Actions | `Button`: `primary` / `soft` / `outline` / `ghost` / `danger`, `sm` / `md` / `lg`, `loading` |
+| Forms | `Input`, `Textarea`, `Select`, `Checkbox`, `RadioGroup`, `Switch`. Label, hint and error are wired up with `aria-describedby` / `aria-invalid` |
+| Display | `Card`, `Badge`, `Avatar` (falls back to initials), `Alert`, `Spinner`, `Skeleton` |
+| Overlay | `Modal` (native `<dialog>`: focus trap, Escape, backdrop click), `Tooltip` (hover and focus) |
+| Navigation | `Tabs` (arrow keys, Home and End) |
+
+Colors, radii and status colors are tokens in `src/styles/global.css`, with dark
+mode values under `prefers-color-scheme: dark`. Animations respect
+`prefers-reduced-motion`.
 
 ### Conventions
 
