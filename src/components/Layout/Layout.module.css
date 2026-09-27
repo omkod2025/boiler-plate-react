@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  transition: opacity 0.2s;
+
+  &[aria-busy='true'] {
+    opacity: 0.6;
+  }
+}
